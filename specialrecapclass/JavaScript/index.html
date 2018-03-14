@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learning JavaScript for Web Tech Course</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+    <!-- <body onload='showDate()'> // onload is usually attached to the body tag -->
+    <div class="header">
+        <h1 id="heading">Web Tech Course JavaScript</h1>
+        <p>With Andrew and Sunday</p>
+    </div>
+    <!-- Following div is only for the EVENTS section below around line 215 -->
+    <div class="container">
+        <!-- <button onclick="doClick()">Click Me</button> -->
+        <!-- <button onclick="this.innerHTML = 'You Clicked!'">Click Me</button> -->
+        <!-- Not good practice to mix like this -->
+        <!-- <button onclick="changeText()">Click Me</button> -->
+        <!-- Better practice to have separate function -->
+        <!-- <button onclick="showDate()">Show Date</button> -->
+        <!-- <button onmouseover="showDate()">Show Date</button> -->
+        <!-- <button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button> -->
+        <!-- <h1 id="time"></h1> -->
+    </div>
+    <script>
+
+    ///////////////
+    // VARIABLES //
+    ///////////////
+    //
+    alert('Welcome to the Web Tech Course! Click to confirm'); // Alert box opens at top of browser
+    // var number1 = 35; // number
+    // var number1 = 40; // number
+    // var number1 = '35'; // string
+    // alert('My favorite number is '+number1); // + for concatenation
+    //
+    // Variables can contain letters, numbers, underscores, dollar signs
+    // Should begin with a letter
+    // Can also start with _ or $ (special case???)
+    // Variables are case sensitive
+    //
+    // var test = 'This is a test';
+    // var Test = 'This is another test';
+    // alert(test);
+    // var myFavoriteNumber; // camel case
+    // myFavoriteNumber = 5; // i.e. No need to declare value initially
+    // var MyFavoriteNumber; // partial case
+    // var my_favorite_number; // underscore style (also often used in PHP)
+    //
+    ////////////
+    // ARRAYS //
+    ////////////
+    ///
+    // var colors = ['red', 'blue', 'green']; // Array of strings
+    // alert(colors);
+    // alert(colors[0]); // First item in an array is 0
+    // var colors = new Array('red', 'yellow', 'orange');
+    // alert(colors[2]);
+    // color[3] = 'green';  // Add an extra value to the array but need to know number of values already in the array
+    // colors.push('purple'); // Add an extra value to the array with dot notation
+    // alert(colors[3]);
+    // var numbers = [5,77,6,43]; // Array of numbers
+    // var numbers = [5,77,6,'Seven',1,55]; // Mixed array
+    // alert(numbers[0] + numbers[2])
+    // Function and method are the same thing
+    // Properties and attributes are the same thing
+    // alert(numbers.length); // length is how many values are in the array
+    // alert(numbers.sort()); // Alpha-numeric sorting of the array
+    // alert(numbers.reverse()); // Reverse order of how it was created
+    //
+    ///////////
+    // LOOPS //
+    ///////////
+    //
+    // console.log('HELLO'); // F12 in browser to open console
+    //
+    // FOR LOOP - When you know how many times you need to loop
+    // for (var i = 0; i < 10; i++){ // Can also do <= etc..
+    // 		console.log('I love the number '+i);
+    // }
+    //
+    // FOR LOOP WITH ARRAY //
+    //
+    // var numbers = [33,54,76,34,2,6];
+    // numbers.reverse();
+    // for(var i = 0;i < numbers.length;i++){
+    // 	console.log(numbers[i]);
+    // }
+    //
+    // WHILE LOOP - More flexible, and when you don't know how many times //
+    //
+    // var i = 0;
+    // while(i < 10){
+    // 	console.log(i);
+    // 	i++;
+    // }
+    //
+    // FOREACH LOOP - For working with arrays //
+    //
+    // var numbers = [33,54,76,34,2,6];
+    // numbers.forEach(function(number){
+    // 	console.log(number);
+    // });
+    //
+    //////////////////
+    // CONDITIONALS //
+    //////////////////
+    //
+    // IF - IF-ELSE CONDITIONAL //
+    //
+    // var var1 = 3;
+    // var var2 = 4;
+    // = for assigning, == for comparing, === datatypes have to match, != for not equal
+    // if(1 == 1){
+    // if(var1 == var2){
+    // if(var1 == var2 && var1 == 3){ // && means AND
+    // if(var1 == var2 || var1 == 3){ // || means OR
+    // 	console.log('This is true');
+    // } else {
+    // 	console.log('This is false');
+    // }
+    //
+    // SWITCH STATEMENTS //
+    //
+    // var fruit = 'apple';
+    // switch(fruit){
+    // 	case "banana":
+    // 		alert('I hate bananas');
+    // 		break;
+    // 	case "apple":
+    // 		alert('I love apples');
+    // 		break;
+    // 	case "orange":
+    // 		alert('Oranges are ok');
+    // 		break;
+    // 	default:
+    // 		alert('I love all other fruits');
+    // 		break;
+    // }
+    //
+    /////////////
+    // OBJECTS //
+    /////////////
+    //
+    // OBJECT LITERAL //
+    //
+    // var person = {
+    //  firstName: 'Brad', // String
+    // 	lastName: 'Traversy',
+    // 	age: 34, // Number
+    // 	children: ['Brianna', 'Nicholas'], // Array
+    // 	address: { // Embedded object
+    // 		street: '555 Something st',
+    // 		city: 'Boston',
+    // 		state: 'MA'
+    // 	},
+    // 	fullName: function(){
+    // 		return this.firstName +" "+this.lastName;// "this" refers to the current object that it's in
+    // 	}
+    // }
+    // console.log(person.firstName);
+    // console.log(person.children[0]);
+    // console.log(person.address.state);
+    // console.log(person.fullName());
+    //
+    // OBJECT CONSTRUCTOR //
+    //
+    // var apple = new Object();
+    // apple.color = 'red';
+    // apple.shape = 'round';
+    // apple.describe = function(){
+    // 	return 'An apple is the color '+this.color+' and is the shape '+this.shape;
+    // }
+    // console.log(apple); // Just show us the object
+    // console.log(apple.color);
+    // console.log(apple.describe());
+    //
+    // CONSTRUCTOR PATTERN //
+    //
+    // function Fruit(name, color, shape){
+    // 	this.name = name;
+    // 	this.color = color;
+    // 	this.shape = shape;
+    // 	this.describe = function(){
+    // 		return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+    // 	}
+    // }
+    // var apple = new Fruit('apple', 'red', 'round');
+    // var melon = new Fruit('melon', 'green', 'round'); // Simpler than doing the whole Object Constructor for each new fruit
+    // console.log(melon.describe());
+    //
+    // ARRAYS OF OBJECTS //
+    //
+    // var users = [
+    // 	{
+    // 		name: 'John Doe',
+    // 		age: 30
+    // 	},
+    // 	{
+    // 		name: 'Mark Smith',
+    // 		age: 44
+    // 	},
+    // 	{
+    // 		name: 'Shelly Williams',
+    // 		age: 20
+    // 	}
+    // ];
+    // console.log(users[0].name);
+    //
+    ////////////
+    // EVENTS // Event handling for clicks, scrolls, drags etc., for interactive web pages
+    //////////// This section requires the <div class="container"> section above around line 18
+    //
+    // function doClick(){
+    // 	alert('You Clicked!');
+    // }
+    // function changeText(id){
+    // 	id.innerHTML = 'You Clicked!';
+    // }
+    // function changeText(id){
+    // 	var heading = document.getElementById('heading'); // DOM function
+    // 	heading.innerHTML = 'You Clicked!';
+    // }
+    // function showDate(){
+    // 	var time = document.getElementById('time');
+    // 	time.innerHTML = Date();
+    // }
+    // function clearDate(){
+    // 	var time = document.getElementById('time');
+    // 	time.innerHTML = '';
+    // }
+    </script>
+</body>
+
+</html>
